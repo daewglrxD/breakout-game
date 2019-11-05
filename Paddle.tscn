@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://StaticBody2D.gd" type="Script" id=1]
+[ext_resource path="res://image03.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 135.731, 22.6315 )
+
+[node name="Paddle" type="StaticBody2D" groups=[
+"paddle",
+]]
+position = Vector2( 235.519, 492.005 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 0.3, 0.3 )
+shape = SubResource( 1 )
+
